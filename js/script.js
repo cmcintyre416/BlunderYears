@@ -8,7 +8,7 @@ let audio = $("<audio>");
 
 wonderApp.init = function() {
   $.ajax({
-    url: "http://proxy.hackeryou.com",
+    url: "https://proxy.hackeryou.com",
     method: "POST",
     headers: {
       "Content-Type": "application/json",
