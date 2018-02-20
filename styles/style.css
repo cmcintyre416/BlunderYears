@@ -3,8 +3,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 html, body {
     height: 100%;
-    font-family: 'Montserrat', sans-serif;  
-    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
 }
 /* Record with form */
 #record {
@@ -23,7 +23,7 @@ html, body {
   overflow: hidden;
   width: 60vh;
   height: 60vh;
-  background:  rgb(36, 36, 36);
+    background: linear-gradient(to bottom left, rgb(37, 37, 37), rgb(0, 0, 0));
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -66,8 +66,9 @@ option {
 .submit {
   margin: 7vh 30px;
   border: none;
-  padding: 20px 10px;
+  padding: 20px 15px;
   color: white;
+  font-size: 1.1rem;
   background: linear-gradient(to right, rgb(0, 251, 255), rgb(140, 0, 162));
 	background-size: 200% 400%;
 	-webkit-animation: Gradient 10s ease infinite;
@@ -128,6 +129,7 @@ option {
     box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.36);
     color: white; 
     }
+
   .start-text {
     width: 85%;
     margin: 0 auto;
@@ -137,8 +139,13 @@ option {
     font-size: 50px;
     margin: 0;
     font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
   }
+
   h1 .start-B {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
     float: left;
     transform: rotate(-8deg);
     font-size: 60px;
@@ -155,6 +162,13 @@ option {
   h1 .start-shift {
     position: relative;
     top: 8px;
+    
+  }
+
+  h1 .thin {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+
   }
 .closed {
   width: 60vh;
@@ -217,7 +231,7 @@ option {
   overflow: hidden;
   max-width: 200px;
   max-height: 200px;
-  background: rgb(39, 39, 39);
+  background: rgb(82, 50, 50);
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -275,46 +289,26 @@ option {
   grid-gap: 12px;
   padding-top: 150px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.song-info {
-    line-height: 1rem;
+  
 }
 .song-info p {
+    line-height: 1rem;
+    font-size: .9rem;
+    margin: .5rem;
+
 }
+.artist-name {
+  font-weight: 400;
+  font-size: .9rem;
+}
+
 
 section {
   background-color: #151515;
   color: white;
 }
 
-@media (max-width: 1050px) {
-  img.spinning {
-    display: none;
-  }
 
-  #record #cvr {
-    text-align: center;
-    font-size: 2rem;
-    position: relative;
-    overflow: hidden;
-    width: 550px;
-    height: 550px;
-background: 
-  }
-
-  #record {
-    transition: none;
-    display: flex;
-    justify-content: center;
-  }
-
-
-  .open {
-    width: 100%;
-  }
-  
-}
 
 
 @keyframes bounce {
@@ -349,3 +343,66 @@ body {
   animation: bounce 2s infinite;
 }
 
+@media (max-width: 1050px) {
+  img.spinning {
+    display: none;
+  }
+
+  #record #cvr {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 60vh;
+    height: 60vh;
+    background: linear-gradient(to bottom left, rgba(56, 56, 56, 0.999), rgba(0, 0, 0, 0.999));
+
+  }
+
+  #record {
+    transition: none;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .open {
+    width: 100%;
+  }
+  
+  
+}
+
+@media (max-width: 550px) {
+  img.spinning {
+    display: none;
+  }
+
+  #record #cvr {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 60vh;
+    height: 60vh;
+    /* background: linear-gradient(to bottom left, rgba(56, 56, 56, 0.999), rgba(0, 0, 0, 0.999)); */
+
+  }
+
+  #record {
+    transition: none;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .open {
+    width: 100%;
+  }
+  
+  .introduction {
+    padding: 30vh 0 20vh;
+    background: rgb(19, 19, 19);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  
+}

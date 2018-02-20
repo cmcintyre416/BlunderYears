@@ -31,6 +31,7 @@ wonderApp.init = function() {
     wonderApp.events();
   });
 
+  //hide arrow when page scroll begins
   $(window).scroll(function() {
     if (
       $(window).scrollTop() + $(window).height() >
@@ -38,6 +39,19 @@ wonderApp.init = function() {
     ) {
       $(".arrowBounce").addClass("hidden");
     }
+  });
+
+  //vanilla js smooth scroll
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      const hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+           window.location.hash = hash;
+      });
+    } 
   });
 };
 
@@ -72,13 +86,14 @@ wonderApp.events = function() {
     $("#record").addClass("closed");
     $(".arrowBounce").removeClass("hidden");
   });
+  
 };
 
 //* Get Ranked
 
 wonderApp.getRanked = function(startYear, endYear) {
   $.ajax({
-    url: "http://proxy.hackeryou.com",
+    url: "https://proxy.hackeryou.com",
     dataType: "json",
     method: "GET",
     data: {
@@ -151,7 +166,7 @@ wonderApp.displayAlbumContent = function(info) {
       `</div>` +
       `</div>` +
       `</div>` +
-      `<div class="song-info"><p>${info.name}</p><p>${
+      `<div class="song-info"><p class="artist-name">${info.name}</p><p>${
         info.artists[0].name
       }</p></div>` +
       `</div>`;
