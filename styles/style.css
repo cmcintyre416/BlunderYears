@@ -257,6 +257,7 @@ option {
   opacity: 0;
 }
 
+
 #player #trackInfos:hover {
   opacity: 1;
 }
@@ -376,10 +377,6 @@ section {
 
 }
 
-
-  /* .open {
-    width: 100%;
-  } */
   
   .introduction {
     padding: 5vh 0 20vh;

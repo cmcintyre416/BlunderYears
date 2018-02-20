@@ -187,7 +187,8 @@ function play(element) {
     $(".play")
       .removeClass("far fa-play-circle")
       .addClass("far fa-pause-circle");
-    $("#player");
+    $("#cover")
+      .addClass("now-playing");
   } else {
     audio.pause();
     $(".play")
